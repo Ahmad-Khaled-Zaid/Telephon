@@ -6,10 +6,12 @@ let objectsArray = [];
 //******************************************** */
 //             PHONE CONSTRUCTOR
 //******************************************** */
-function Phone(name, price, picture) {
+function Phone(name, price, picture, memory, color) {
   this.name = name;
   this.price = price;
   this.picture = picture;
+  this.memory = memory;
+  this.color = color;
   phonesArray.push(this);
   this.render();
 }
@@ -33,9 +35,9 @@ Phone.prototype.render = function () {
   phonePrice.textContent = `السعر:  ${this.price} د.أ`;
   let button = document.createElement("button");
   phoneBox.appendChild(button);
-  button.textContent = "شراء";
+  button.textContent = "إضافة إلى السلة ";
   button.className = "phoneBtn";
-  button.id = this.price;
+  button.id = this.name;
   button.addEventListener("click", buy);
 };
 function buy(event) {
@@ -44,8 +46,8 @@ function buy(event) {
   }
   event.preventDefault();
   for (let i = 0; i < phonesArray.length; i++) {
-    if (event.target.id == phonesArray[i].price) {
-    console.log(phonesArray[i]);
+    if (event.target.id == phonesArray[i].name) {
+      console.log(phonesArray[i]);
       objectsArray.push(phonesArray[i]);
       let data = JSON.stringify(objectsArray);
       localStorage.setItem("phones", data);
@@ -57,12 +59,12 @@ function buy(event) {
 //******************************************** */
 //                NEW INSTANCES
 //******************************************** */
-new Phone("Galaxy S20", 100, "./img/samsung-galaxy-s20.jpg");
-new Phone("Galaxy S20", 200, "./img/samsung-galaxy-s20.jpg");
-new Phone("Galaxy S20", 300, "./img/samsung-galaxy-s20.jpg");
-new Phone("Galaxy S20", 400, "./img/samsung-galaxy-s20.jpg");
-new Phone("Galaxy S20", 500, "./img/samsung-galaxy-s20.jpg");
-new Phone("Galaxy S20", 600, "./img/samsung-galaxy-s20.jpg");
+new Phone("Galaxy S20", 100, "./img/samsung-galaxy-s20-edit.jpg", 256,"أسود");
+new Phone("Galaxy S19", 200, "./img/samsung-galaxy-s20-edit.jpg", 128,"أبيض");
+new Phone("Galaxy S18", 300, "./img/samsung-galaxy-s20-edit.jpg", 128, "أسود");
+new Phone("Galaxy S17", 400, "./img/samsung-galaxy-s20-edit.jpg", 256,"رمادي");
+new Phone("Galaxy S16", 500, "./img/samsung-galaxy-s20-edit.jpg", 64,'أبيض');
+new Phone("Galaxy S15", 600, "./img/samsung-galaxy-s20-edit.jpg", 64,"رمادي");
 
 function reloadCart() {
   let getItems = localStorage.getItem("phones");

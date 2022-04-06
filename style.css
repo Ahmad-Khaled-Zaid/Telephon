@@ -99,7 +99,6 @@ nav ul li a:hover {
     padding: 10px 30px;
     margin-top: 20px;
     background-color: rgb(143, 20, 231);
-    ;
     border-radius: 5px;
     color: white;
     font-size: large;
@@ -158,7 +157,7 @@ nav ul li a:hover {
 }
 
 .images {
-    width: 400px;
+    width: 200px;
 }
 
 #phones {
@@ -166,9 +165,8 @@ nav ul li a:hover {
 }
 
 #phoneSection {
-    width: 90vw;
+    width: 70vw;
     margin: 100px auto;
-    /* display: flex; */
 }
 
 #phoneSection div {
@@ -183,26 +181,36 @@ nav ul li a:hover {
     color: rgb(143, 20, 231);
 }
 
-#cart{
+#cart {
     width: 40px;
     z-index: 10;
 }
-#cart-items{
+
+#cart-items {
+    /* border: 2px dashed; */
+    font-size: 10px;
     position: absolute;
-    left: 11px;
-    top: 16px;
+    left: 25px;
+    top: 10px;
     color: white;
+    padding: 0px 5px;
     border-radius: 10px;
-    font-weight:900;
-    animation: cart ease-in 3s;
+    background-color: red;
+    font-weight: 900;
+    animation: cart ease-in 1s;
     animation-iteration-count: infinite;
 }
-@keyframes cart {
-    from{
-        color: whitesmoke;
-        
+
+    @keyframes cart {
+        from {
+            /* color: white; */
+            transform: scale(1);
+
+        }
+
+        to {
+            /* color: orange; */
+            transform: scale(1.05);
+            /* background-color: rgb(233, 35, 233); */
+        }
     }
-    to{
-        color: red;
-    }
-}

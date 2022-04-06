@@ -1,0 +1,106 @@
+/* html{
+    font-family: 'Tajawal',
+    sans-serif;
+} */
+
+#emptyList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    justify-content: center;
+
+}
+
+#cartHeader {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#emptyList img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+#shoppingList {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#shoppingList h1 {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    font-size: 30px;
+}
+
+.phones-box {
+    border: rgb(200, 188, 188) solid 2px;
+    margin: 10px;
+    padding: 15px;
+    width: 50%;
+    display: flex;
+    position: relative;
+    border-radius: 5px;
+
+}
+
+.phones-box img {
+    width: 100px;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.phones-box p {
+    position: absolute;
+}
+
+.phones-box h2 {
+    margin-right: 10px;
+    margin-top: 20px;
+
+}
+
+.deletePhones {
+    position: absolute;
+    top: 150px;
+    right: 14px;
+    padding: 5px 20px;
+    text-align: center;
+    color: #000;
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 20px;
+    background-color: #fff;
+    margin-top: 2%;
+}
+.deletePhones:hover{
+background-color: black;
+color: white;
+cursor: pointer;
+transition: 0.2s;
+}
+.deletePhones:active {
+    transform: scale(0.9);
+}
+.phonesMemory{
+    position: absolute;
+    top:30%;
+    right: 18.5%;
+}
+.items_price{
+    position: absolute;
+    top:15%;
+    right: 85%;
+    color: red(0, 255, 42);
+    font-size:30px ;
+}
+#line{
+    position: absolute;
+    top: 130px;
+    color: rgb(218, 222, 227);
+}
