@@ -1,6 +1,7 @@
 "use strict";
 let list = document.getElementById("emptyList");
 let itemsList = document.getElementById("shoppingList");
+let cartItems = document.getElementById("cart-items");
 
 // *********************************************** */
 //       FUNCTION TO CHECK THE LOCAL STORAGE
@@ -51,7 +52,8 @@ function show_List() {
     // create break-line
     let line = document.createElement("p");
     itemBox.appendChild(line);
-    line.textContent ="________________________________________________________________________________________________________";
+    line.textContent =
+      "________________________________________________________________________________________________________";
     line.id = "line";
 
     // create deleteButton
@@ -91,3 +93,8 @@ function getCartItem() {
   let itemsArray = JSON.parse(localStorage.getItem("phones"));
   return itemsArray;
 }
+function countCartItems() {
+  cartItems.textContent=getCartItem().length
+}
+
+countCartItems();

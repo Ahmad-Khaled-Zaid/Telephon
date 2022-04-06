@@ -1,5 +1,6 @@
 "use strict";
 let phonesSection = document.getElementById("phoneSection");
+let cartItems = document.getElementById("cart-items");
 let phonesArray = [];
 let objectsArray = [];
 
@@ -59,15 +60,22 @@ function buy(event) {
 //******************************************** */
 //                NEW INSTANCES
 //******************************************** */
-new Phone("Galaxy S20", 100, "./img/samsung-galaxy-s20-edit.jpg", 256,"أسود");
-new Phone("Galaxy S19", 200, "./img/samsung-galaxy-s20-edit.jpg", 128,"أبيض");
+new Phone("Galaxy S20", 100, "./img/samsung-galaxy-s20-edit.jpg", 256, "أسود");
+new Phone("Galaxy S19", 200, "./img/samsung-galaxy-s20-edit.jpg", 128, "أبيض");
 new Phone("Galaxy S18", 300, "./img/samsung-galaxy-s20-edit.jpg", 128, "أسود");
-new Phone("Galaxy S17", 400, "./img/samsung-galaxy-s20-edit.jpg", 256,"رمادي");
-new Phone("Galaxy S16", 500, "./img/samsung-galaxy-s20-edit.jpg", 64,'أبيض');
-new Phone("Galaxy S15", 600, "./img/samsung-galaxy-s20-edit.jpg", 64,"رمادي");
+new Phone("Galaxy S17", 400, "./img/samsung-galaxy-s20-edit.jpg", 256, "رمادي");
+new Phone("Galaxy S16", 500, "./img/samsung-galaxy-s20-edit.jpg", 64, "أبيض");
+new Phone("Galaxy S15", 600, "./img/samsung-galaxy-s20-edit.jpg", 64, "رمادي");
 
 function reloadCart() {
   let getItems = localStorage.getItem("phones");
   let parsedArray = JSON.parse(getItems);
   objectsArray = parsedArray;
 }
+
+function countCartItems() {
+  let parsedArray = JSON.parse(localStorage.getItem("phones"));
+  console.log(parsedArray.length);
+  cartItems.textContent = parsedArray.length;
+}
+countCartItems();

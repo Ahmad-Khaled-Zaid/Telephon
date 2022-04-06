@@ -201,16 +201,13 @@ nav ul li a:hover {
     animation-iteration-count: infinite;
 }
 
-    @keyframes cart {
-        from {
-            /* color: white; */
-            transform: scale(1);
+@keyframes cart {
+    from {
+        transform: scale(1);
 
-        }
-
-        to {
-            /* color: orange; */
-            transform: scale(1.05);
-            /* background-color: rgb(233, 35, 233); */
-        }
     }
+
+    to {
+        transform: scale(1.07);
+    }
+}
