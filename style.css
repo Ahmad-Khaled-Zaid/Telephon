@@ -21,6 +21,7 @@ html {
     min-height: 10vh;
     align-items: center;
     width: 90%;
+    position: relative;
 }
 
 nav ul {
@@ -180,4 +181,28 @@ nav ul li a:hover {
     text-align: center;
     margin-top: 100px;
     color: rgb(143, 20, 231);
+}
+
+#cart{
+    width: 40px;
+    z-index: 10;
+}
+#cart-items{
+    position: absolute;
+    left: 11px;
+    top: 16px;
+    color: white;
+    border-radius: 10px;
+    font-weight:900;
+    animation: cart ease-in 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes cart {
+    from{
+        color: whitesmoke;
+        
+    }
+    to{
+        color: red;
+    }
 }
