@@ -42,6 +42,17 @@ Phone.prototype.render = function () {
   button.addEventListener("click", buy);
 };
 function buy(event) {
+  Swal.fire({
+    position: "top-start",
+    icon: "success",
+    title: "تمت الإضافة إلى السلة   ",
+    showConfirmButton: false,
+    timer: 1000,
+    width: 300,
+  });
+  setTimeout(location.reload.bind(location), 600);
+
+
   if (localStorage.getItem("phones") !== null) {
     reloadCart();
   }
