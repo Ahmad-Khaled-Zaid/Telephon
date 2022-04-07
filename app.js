@@ -78,6 +78,8 @@ new Phone("Galaxy S17", 400, "./img/samsung-galaxy-s20-edit.jpg", 256, "رماد
 new Phone("Galaxy S16", 500, "./img/samsung-galaxy-s20-edit.jpg", 64, "أبيض");
 new Phone("Galaxy S15", 600, "./img/samsung-galaxy-s20-edit.jpg", 64, "رمادي");
 
+
+
 function reloadCart() {
   let getItems = localStorage.getItem("phones");
   let parsedArray = JSON.parse(getItems);

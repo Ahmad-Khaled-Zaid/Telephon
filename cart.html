@@ -42,10 +42,32 @@
             <h2>سلة التسوق فارغة</h2>
             <p>لا يوجد عناصر في سلة التسوق الخاصة بك </p>
         </section>
-            <!-- <h1 id="cartHeader">السلة</h1> -->
+        <section id="checkout">
+            <button id="btn" hidden>مسح جميع العناصر</button>
 
-        <section id="shoppingList">
+            <section id="shoppingList"></section>
+            <section id="invoice" hidden>
+                <div id="dataAndPlace" hidden>
+                    <h1>التاريخ المتوقع للتوصيل إلى </h1>
+                    <select name="select" id="select">
+                        <option value="">اختر المدينة</option>
+                        <option value="عمان">عمان</option>
+                        <option value="الزرقاء">الزرقاء</option>
+                        <option value="الرصيفة">الرصيفة</option>
+                        <option value="مادبا">مادبا</option>
+                        <option value="عجلون">عجلون</option>
+                        <option value="السلط">السلط</option>
+                        <option value="اربد">اربد</option>
+                        <option value="العقبة">العقبة</option>
+                    </select>
+                </div>
+                <section id="deliver">
+
+                </section>
+            </section>
+
         </section>
+
     </main>
 </body>
 <script src="cart.js"></script>
