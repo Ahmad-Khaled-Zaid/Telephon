@@ -135,7 +135,8 @@ function invoice_place() {
   orderCity.className = "cityTextColor";
   let line = document.createElement("p");
   invoice.appendChild(line);
-  line.textContent = "_________________________ أو _________________________";
+  line.textContent = "_________________________________أو________________________________";
+  line.className="lineClass";
   Exhibition = document.createElement("p");
   invoice.appendChild(Exhibition);
   Exhibition.textContent = `الاستلام في المعرض في ${selectOnChange}`;
@@ -145,11 +146,15 @@ function invoice_place() {
   ExhibitionCity.className = "cityTextColor";
   let line2 = document.createElement("p");
   invoice.appendChild(line2);
-  line2.textContent = "_____________________________________________________";
+  line2.textContent = "___________________________________________________________________";
+  line2.className = "lineClass";
+
   invoice_Price();
   let line3 = document.createElement("p");
   invoice.appendChild(line3);
-  line3.textContent = "_____________________________________________________";
+  line3.textContent = "___________________________________________________________________";
+  line3.className = "lineClass";
+
 
   let grandTotalBox = document.createElement("div");
   grandTotalBox.id = "grandTotalBox";
@@ -157,12 +162,14 @@ function invoice_place() {
   let grandTotalText = document.createElement("p");
   grandTotalBox.appendChild(grandTotalText);
   grandTotalText.textContent = `المجموع الإجمالي `;
+  grandTotalText.id = 'grandTotalText';
   let grandTotalAmount = document.createElement("p");
   grandTotalBox.appendChild(grandTotalAmount);
   grandTotalAmount.textContent = `${priceCalculation()[2]} د.أ `;
   let line4 = document.createElement("p");
   invoice.appendChild(line4);
-  line4.textContent = "_____________________________________________________";
+  line4.textContent = "___________________________________________________________________";
+  line4.className="lineClass";
   let acceptConditions = document.createElement("p");
   invoice.appendChild(acceptConditions);
   acceptConditions.textContent =
@@ -191,6 +198,7 @@ function invoice_Price() {
   let subTotalText = document.createElement("p");
   subTotalBox.appendChild(subTotalText);
   subTotalText.textContent = `المجموع الفرعي `;
+  subTotalText.className="totalText";
   let subTotalAmount = document.createElement("p");
   subTotalBox.appendChild(subTotalAmount);
   subTotalAmount.textContent = `${priceCalculation()[0]} د.أ `;
@@ -201,6 +209,8 @@ function invoice_Price() {
   let shippingPriceText = document.createElement("p");
   shippingPriceBox.appendChild(shippingPriceText);
   shippingPriceText.textContent = `اجمالي رسوم الشحن `;
+  shippingPriceText.className = "totalText";
+
   let shippingPriceAmount = document.createElement("p");
   shippingPriceBox.appendChild(shippingPriceAmount);
   shippingPriceAmount.textContent = `${priceCalculation()[1]} د.أ`;
